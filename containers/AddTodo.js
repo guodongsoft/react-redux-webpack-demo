@@ -1,20 +1,23 @@
-import {connect} from "react-redux"
+import { connect } from "react-redux";
+import { addTodo } from "../actions";
 
-let AddTodo = () => {
+let AddTodo = ({ dispatch }) => {
+    let input;
+
     return (
-            <div>
+        <div>
             <from onSubmit={e=>{
                 e.preventDefault
                 if (!input.value.trim()) {return}
                 dispatch(addTodo(input.value))
                 input.value = ""
             }}>
-            <input ref={node=>{input=node}}/>
-            <button type="submit">
-              Add Todo
-            </button>
+                <input ref={node=>{input=node}}/>
+                <button type="submit">
+                  Add Todo
+                </button>
             </from>
-            </div>
+        </div>
     )
 }
 AddTodo = connect()(AddTodo)

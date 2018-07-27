@@ -1,6 +1,6 @@
-import AddTodo form './containers/AddTodo'
-import VisibleTodoList form './containers/VisibleTodoList' 
-import Footer from "./Footer";
+import AddTodo from '../containers/AddTodo';
+import VisibleTodoList from '../containers/VisibleTodoList';
+import Footer from './Footer';
 
 const App = () => (
   <div>
